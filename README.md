@@ -1,0 +1,1 @@
+# generate-node-hapi-swagger-rest
