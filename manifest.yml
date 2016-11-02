@@ -1,0 +1,15 @@
+---
+applications:
+- name: generate-node-hapi-swagger-rest 
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git#v1.5.21
+  memory: 256M
+  disk_quota: 256M
+  instances: 1
+  host: generate-node-hapi-swagger-rest
+  path: .  
+  env:
+    NODE_ENV: PRODUCTION
+#   services:
+#    - bot_keys
+# pcf ready manifest file
+    
