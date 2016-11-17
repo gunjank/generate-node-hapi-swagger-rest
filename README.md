@@ -25,3 +25,12 @@ Copy and run below url in your browser
 ###Swagger Rest api
 Application URL/documentation - Look on `src/config/settings.js` file for local port number and cloud url/port settings. 
 `http://localhost:3000/documentation`
+
+## Deployment - PCF 
+
+Update name (give your application name) and host (your application host name) in manifest.yml file. 
+```
+`name: generate-node-hapi-swagger-rest`
+`host: generate-node-hapi-swagger-rest`
+```
+[cf push](https://docs.cloudfoundry.org/devguide/deploy-apps/deploy-app.html) -f manifest.yml  
