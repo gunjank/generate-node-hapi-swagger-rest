@@ -10,6 +10,6 @@ applications:
   env:
     NODE_ENV: PRODUCTION
 #   services:
-#    - bot_keys
-# pcf ready manifest file
+#    - any service
+
     

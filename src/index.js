@@ -9,16 +9,13 @@ let path = require('path'),
     Inert = require('inert'),
     Vision = require('vision'),
     HapiSwagger = require('hapi-swagger'),
-    Pack = require('../package');
-
-
+    Pack = require('../package'),
+    settings = require('./config/settings');
 
 //log clas will now globally available
 global.log = bunyan.createLogger({
     name: 'application-name'
 });
-
-
 
 /**
  * Construct the server
@@ -42,7 +39,7 @@ log.info('server constructed');
 // port: config.port
 
 server.connection({
-    port: process.env.PORT || 3000
+    port: settings.port
 
 });
 //debug('added port: ', config.port);
@@ -57,10 +54,8 @@ server.register([Inert, Vision, {
     'register': HapiSwagger,
     'options': swaggerOptions
 }], function (err) {
-    err ? log.info("Inert or Vision plugin failed, it will stop swagger") : log.info("Inert or Vision plugin registered, it will start  swagger");
+    if (err) log.info("Inert or Vision plugin failed, it will stop swagger");
 });
-
-
 
 /**
  * Build a logger for the server & each service
@@ -68,7 +63,8 @@ server.register([Inert, Vision, {
 let reporters = [new GoodFile({
     log: '*'
 }, __dirname + '/../logs/server.log')];
-//if you want to serve static files 
+
+//Static file serving - if you want to serve static files - keep all your static (html/js/etc.) inside below given path folder
 server.route({
     method: 'get',
     path: '/{param*}',
@@ -106,7 +102,7 @@ server.register({
 });
 
 /**
- * If this isn't for testing, start the server
+ * Start the server
  */
 
 server.start(function (err) {

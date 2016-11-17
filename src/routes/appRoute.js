@@ -5,8 +5,6 @@ let appHandler = require('../handlers/appHandler');
 
 module.exports = function (server, options) {
     // read
-
-
     server.route({
         method: 'get',
         path: '/v1/feeds',
@@ -20,6 +18,7 @@ module.exports = function (server, options) {
             }
         }
     });
+    //read
     server.route({
         method: 'get',
         path: '/v1/feeds/{feedId}',
