@@ -16,7 +16,7 @@ See `Deployment` section below to know how to deploy the project on `Pivotal clo
 
 [Add required dependencies] (https://docs.npmjs.com/getting-started/installing-npm-packages-locally) - `npm install ` from your application root folder.
 
-###run
+###Run
 From your application root folder `npm start`
 
 Copy and run below url in your browser 
