@@ -1,6 +1,6 @@
 'use strict';
 
-let Feed = function () {
+const Feed = function () {
     //constructor 
 }
 Feed.prototype.feedId = function (feedId) {
