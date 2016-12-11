@@ -11,7 +11,9 @@ const log = require('./config/logger'),
     Vision = require('vision'),
     HapiSwagger = require('hapi-swagger'),
     Pack = require('../package'),
-    settings = require('./config/settings');
+    settings = require('./config/settings'),
+    appRoute = require(__dirname + '/routes/appRoute'),
+    apiRoute = require(__dirname + '/routes/apiRoute');
 
 
 /**
@@ -115,7 +117,10 @@ server.start(function (err) {
             uri: cn.info.uri
         };
     });
-    const appRoute = require(__dirname + '/routes/appRoute')(server);
+    //initilize appRoute
+    appRoute(server);
+    //initilize apiRoute
+    apiRoute(server);
     log.info({
         summary: summary
     }, 'Connection summary ');
