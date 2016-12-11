@@ -1,4 +1,5 @@
 # generate-node-hapi-swagger-rest
+[![Build Status](https://travis-ci.org/gunjank/generate-node-hapi-swagger-rest.svg?branch=master)](https://travis-ci.org/gunjank/generate-node-hapi-swagger-rest)
 
 This repo contains initial boilerplate code for a very simple `Hapi server`, with `Swagger Rest API`.
 
