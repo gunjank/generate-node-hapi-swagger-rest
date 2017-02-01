@@ -20,11 +20,13 @@
   },
   "devDependencies": {
     "code": "^4.0.0",
-    "lab": "^11.2.1"
+    "lab": "^11.2.1",
+    "nodemon": "^1.11.0"
   },
   "scripts": {
     "test": "lab -c",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev":"nodemon index.js"
   },
   "repository": {
     "type": "git",
