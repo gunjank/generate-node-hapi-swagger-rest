@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "code": "^4.0.0",
-    "lab": "^11.2.1"
+    "lab": "^14.3.4"
   },
   "scripts": {
     "test": "lab -c",
