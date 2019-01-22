@@ -15,7 +15,7 @@ module.exports = {
             feed.feedDesc = "this is feed description for " + feed.feedId;
             resultFeed.data.push(feed);
         }
-        log.debug({
+        log.info({
             resultFeed: resultFeed
         }, 'feeds result');
         reply(resultFeed);

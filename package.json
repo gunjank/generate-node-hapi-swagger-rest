@@ -4,29 +4,28 @@
   "description": "Boilerplate Node - Hapi - Swagger Rest application",
   "main": "index.js",
   "dependencies": {
-    "boom": "^2.8.0",
+    "boom": "^7.3.0",
     "bunyan": "^1.8.1",
-    "good": "^6.2.0",
+    "good": "^7.0.0",
     "good-console": "^6.1.2",
-    "good-file": "^5.0.1",
-    "hapi": "^15.1.1",
+    "good-file": ">=5.0.3",
+    "good-squeeze": "^5.1.0",
+    "hapi": "^16.1.1",
     "hapi-swagger": "^7.2.0",
     "inert": "^4.0.2",
-    "joi": "^9.1.0",
-    "lodash": "^3.10.0",
-    "lout": "^6.2.3",
+    "joi": "^14.3.0",
+    "lodash": "^4.17.11",
+    "lout": "^10.0.0",
     "request": "^2.75.0",
     "vision": "^4.1.0"
   },
   "devDependencies": {
     "code": "^4.0.0",
-    "lab": "^11.2.1",
-    "nodemon": "^1.11.0"
+    "lab": "^11.2.1"
   },
   "scripts": {
     "test": "lab -c",
-    "start": "node index.js",
-    "dev":"nodemon index.js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",

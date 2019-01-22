@@ -58,9 +58,9 @@ server.register([Inert, Vision, {
 /**
  * Build a logger for the server & each service
  */
-const reporters = [new GoodFile({
-    log: '*'
-}, __dirname + '/../logs/server.log')];
+// const reporters = [new GoodFile({
+//     log: '*'
+// }, __dirname + '/../logs/server.log')];
 
 //Static file serving - if you want to serve static files - keep all your static (html/js/etc.) inside below given path folder
 server.route({
@@ -68,29 +68,18 @@ server.route({
     path: '/{param*}',
     handler: {
         directory: {
-            path: __dirname + '/client/dist/',
+            path: __dirname + '/../public',
             listing: true
         }
     }
 });
 
+
 /**
  * Add logging
+ * Add Good Npm Plugin
  */
-server.register({
-    register: Good,
-    options: {
-        opsInterval: 1000,
-        reporters: reporters
-    }
-}, function (err) {
-    if (err)
-        throw new Error(err);
 
-    log.debug({
-        reporters: reporters
-    }, 'registered Good for logging with reporters');
-});
 
 /**
  * Add /docs route
